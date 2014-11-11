@@ -13,3 +13,9 @@ dates and order
 
 2. Failing test for article class
 	*TDD might solve this through several steps but we know that we want to show persistance with postgres and sequel so will jump straight to that*
+
+3. setup model
+	1. *setup postgreSQL: beyond scope provide link*
+	2. *create a test and development database `createdb commentr_test`*
+	3. *create a migration, remember to include down migration*
+	4. *Migrate up, rember to do for test and development enviroment `padrino rake sq:migrate:up RACK_ENV=test`*
