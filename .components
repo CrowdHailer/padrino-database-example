@@ -1,0 +1,9 @@
+---
+:orm: sequel
+:test: minitest
+:mock: none
+:script: none
+:renderer: slim
+:stylesheet: none
+:namespace: Commentr
+:migration_format: number
