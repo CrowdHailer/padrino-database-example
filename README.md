@@ -26,3 +26,6 @@ dates and order
 5. Migration to add null constraint on body column
 	*Execute this migration with `RACK_ENV=test padrino rake sq:migrate:up`*
 	*If this fails you may have existing entries with null values that cannot be migrated, reset the table `RACK_ENV=test padrino rake sq:migrate:auto`*
+
+6. Test article can be published
+	*Note setting value with symbol containing question mark. This gives ruby convention booleans*

@@ -12,4 +12,9 @@ class ArticleTest < MiniTest::Test
 			Article.create 
 		end
 	end
+
+	def test_article_can_be_published
+		article = Article.new published?: true
+		assert article.published?, 'Article should be published'
+	end
 end
