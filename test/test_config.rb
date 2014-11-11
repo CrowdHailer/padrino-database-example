@@ -4,6 +4,7 @@ Dir[File.expand_path(File.dirname(__FILE__) + "/../app/helpers/**/*.rb")].each(&
 
 require_relative './support/factories'
 
+# Spec not used as we are not testing app
 class MiniTest::Spec
   include Rack::Test::Methods
 
@@ -20,4 +21,8 @@ class MiniTest::Spec
     @app ||= block_given? ? app.instance_eval(&blk) : app
     @app ||= Padrino.application
   end
+end
+
+class MiniTest::Test
+  include FactoryGirl::Syntax::Methods
 end

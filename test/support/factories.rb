@@ -5,5 +5,8 @@ FactoryGirl.define do
 
 	factory :article do
 		body 'Some content, maybe about hippos'
+		trait :published do
+			published? true			
+		end
 	end
 end

@@ -47,3 +47,7 @@ dates and order
 
 9. Add Factory girl
 	*Do not need to specify a value for published as db provides default*
+
+10. Switch test for factory girl
+	*Has good documentation, I find traits very useful.*
+	*By default I make a factory with no traits valid then take away as needed in tests* 
