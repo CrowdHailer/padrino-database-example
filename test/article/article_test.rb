@@ -17,4 +17,9 @@ class ArticleTest < MiniTest::Test
 		article = Article.new published?: true
 		assert article.published?, 'Article should be published'
 	end
+
+	def test_article_should_default_be_un_published?
+		article = Article.create body: 'Not tested and generally a faff'
+		assert_equal false, article.published?
+	end
 end

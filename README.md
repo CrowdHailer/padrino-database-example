@@ -32,3 +32,15 @@ dates and order
 
 7. Write migration for published column
 	*Note table column may contain Qmark. set default value to false*
+
+8. Test default value is set
+	I want to write this test
+
+	```ruby
+	def test_article_should_default_be_un_published?
+		article = Article.new
+		assert_equal false, article.published?
+	end
+	```
+
+	However if I do this the article is not from the database and so the default hasn't been set. Instead I should use article create. This will create try to create a database entry so I need to include a body
