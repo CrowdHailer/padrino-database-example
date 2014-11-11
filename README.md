@@ -50,4 +50,7 @@ dates and order
 
 10. Switch test for factory girl
 	*Has good documentation, I find traits very useful.*
-	*By default I make a factory with no traits valid then take away as needed in tests* 
+	*By default I make a factory with no traits valid then take away as needed in tests*
+
+11. Test for unique headline
+	*simply save one article then copy headline and try creating a new article*

@@ -17,8 +17,20 @@ class ArticleTest < MiniTest::Test
 		assert article.published?, 'Article should be published'
 	end
 
-	def test_article_should_default_be_un_published?
+	def test_article_should_default_be_unpublished?
 		article = create :article
 		assert_equal false, article.published?
+	end
+
+	def test_article_should_have_a_headline
+		article = build :article
+		assert article.headline, 'Article should have headline'
+	end
+
+	def test_headlines_should_be_unique
+		article = create :article
+		assert_raises Sequel::UniqueConstraintViolation do
+			forged_article = create :article, headline: article.headline
+		end
 	end
 end
