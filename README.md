@@ -29,3 +29,6 @@ dates and order
 
 6. Test article can be published
 	*Note setting value with symbol containing question mark. This gives ruby convention booleans*
+
+7. Write migration for published column
+	*Note table column may contain Qmark. set default value to false*
