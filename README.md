@@ -62,3 +62,6 @@ dates and order
 
 13. Test for finding all published articles in alphabetical order
 	*It is good for to write special methods to query, this allows in other parts of the system to know less about the storage `Article.all_available` vs `Article.where(column: value).order(:other_column).all*
+
+14. Add paginated view of all published articles
+	*Slightly ugly test, tests too much in one go. Would be interested to see better way of testing that doesnt hit the database much more*

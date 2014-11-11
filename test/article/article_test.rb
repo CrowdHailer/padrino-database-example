@@ -49,4 +49,18 @@ class ArticleTest < MiniTest::Test
 		assert_equal article_A, articles.first
 		assert_equal article_B, articles.last
 	end
+
+	def test_paginated_results_shows_every_10_alphabetically
+		13.times { |n| create :article, :published, headline: "B#{n}" }
+		first_article = create :article, :published, headline: 'A'
+		last_article = create :article, :published, headline: 'C'
+		page_1_results = Article.available_page
+		page_2_results = Article.available_page(2)
+		assert_equal 10, page_1_results.length
+		assert_equal first_article, page_1_results.first
+		refute_includes page_1_results, last_article
+		assert_equal 5, page_2_results.length
+		refute_includes page_2_results, first_article
+		assert_equal last_article, page_2_results.last
+	end
 end
