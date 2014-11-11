@@ -19,3 +19,6 @@ dates and order
 	2. *create a test and development database `createdb commentr_test`*
 	3. *create a migration, remember to include down migration*
 	4. *Migrate up, rember to do for test and development enviroment `padrino rake sq:migrate:up RACK_ENV=test`*
+
+4. Test article body is required
+	*database constraints fail with errors. It is normally best to use a form to validate input and use database constraints as exceptional errors*

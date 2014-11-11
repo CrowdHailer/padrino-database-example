@@ -6,4 +6,10 @@ class ArticleTest < MiniTest::Test
 		article = Article.new body: test_content
 		assert_equal test_content, article.body 
 	end	
+
+	def test_body_content_is_required
+		assert_raises Sequel::NotNullConstraintViolation do
+			Article.create 
+		end
+	end
 end
