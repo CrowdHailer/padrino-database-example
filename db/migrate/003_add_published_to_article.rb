@@ -6,5 +6,8 @@ Sequel.migration do
   end
 
   down do
+  	alter_table :articles do
+  		drop_column :published?
+  	end
   end
 end
