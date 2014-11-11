@@ -22,3 +22,7 @@ dates and order
 
 4. Test article body is required
 	*database constraints fail with errors. It is normally best to use a form to validate input and use database constraints as exceptional errors*
+
+5. Migration to add null constraint on body column
+	*Execute this migration with `RACK_ENV=test padrino rake sq:migrate:up`*
+	*If this fails you may have existing entries with null values that cannot be migrated, reset the table `RACK_ENV=test padrino rake sq:migrate:auto`*
