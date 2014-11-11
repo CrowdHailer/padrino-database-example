@@ -19,7 +19,7 @@ class ArticleTest < MiniTest::Test
 	end
 
 	def test_article_should_default_be_un_published?
-		article = Article.create body: 'Not tested and generally a faff'
+		article = FactoryGirl.create :article
 		assert_equal false, article.published?
 	end
 end

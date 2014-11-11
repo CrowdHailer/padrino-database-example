@@ -43,4 +43,7 @@ dates and order
 	end
 	```
 
-	However if I do this the article is not from the database and so the default hasn't been set. Instead I should use article create. This will create try to create a database entry so I need to include a body
+	However if I do this the article is not from the database and so the default hasn't been set. Instead I should use article create. This will create try to create a database entry so I need to include a body.
+
+9. Add Factory girl
+	*Do not need to specify a value for published as db provides default*
