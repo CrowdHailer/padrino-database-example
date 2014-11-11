@@ -4,6 +4,9 @@ FactoryGirl.define do
 	to_create { |i| i.save }
 
 	factory :article do
+		sequence :headline do |number|
+			"New news of the day: #{number}"
+		end
 		body 'Some content, maybe about hippos'
 		trait :published do
 			published? true			

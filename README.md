@@ -54,3 +54,8 @@ dates and order
 
 11. Test for unique headline
 	*simply save one article then copy headline and try creating a new article*
+
+12 Add Unique Headline to article
+	*No headline is required all previous tests of body and published require a headline, add to factory*
+	*Headlines must be unique so we use a factory girl sequence*
+	*We are not clearing test database so we get headline clashes after running the tests once. Add to test config to make all tests roll back previous runnings will still exist so reset the database, This transaction patch I always add first*
