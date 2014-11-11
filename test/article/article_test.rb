@@ -33,4 +33,20 @@ class ArticleTest < MiniTest::Test
 			forged_article = create :article, headline: article.headline
 		end
 	end
+
+	def test_available_articles_should_not_include_unpublished_articles
+		published = create :article, :published
+		unpublished = create :article
+		articles = Article.all_available
+		assert_includes articles, published
+		refute_includes articles, unpublished
+	end
+
+	def test_available_articles_are_returned_alphabetically
+		article_B = create :article, :published, headline: 'Bananas, by Gorrillas'
+		article_A = create :article, :published, headline: 'Avacados on Holiday'
+		articles = Article.all_available
+		assert_equal article_A, articles.first
+		assert_equal article_B, articles.last
+	end
 end

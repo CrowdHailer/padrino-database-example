@@ -59,3 +59,6 @@ dates and order
 	*No headline is required all previous tests of body and published require a headline, add to factory*
 	*Headlines must be unique so we use a factory girl sequence*
 	*We are not clearing test database so we get headline clashes after running the tests once. Add to test config to make all tests roll back previous runnings will still exist so reset the database, This transaction patch I always add first*
+
+13. Test for finding all published articles in alphabetical order
+	*It is good for to write special methods to query, this allows in other parts of the system to know less about the storage `Article.all_available` vs `Article.where(column: value).order(:other_column).all*
